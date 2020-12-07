@@ -1,0 +1,107 @@
+@import "./vars";
+@import "./mixins";
+
+.section-editor {
+  padding-top: 129px;
+  padding-bottom: 70px;
+  position: relative;
+  background-color:rgb(204, 195, 195);
+}
+
+.download-btn {
+  position: absolute;
+  top: -32px;
+  left: calc(50% - 195.5px);
+  align-self: center;
+  padding: 20px 61px;
+  border: 2px solid $textColorCta;
+  border-radius: 31px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  background-color: $textColorCta;
+}
+
+.subtitle-h2 {
+  font-size: 42px;
+  color: $textColorCta;
+  text-transform: uppercase;
+  line-height: 42px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.section-editor__subtitle-h2 {
+  margin-bottom: 35px;
+}
+
+.editor-description {
+ color: $textColotToRead;
+ @include lato;
+ font-size: 21px;
+ line-height: 32px;
+ text-align: center;
+ max-width: 861px;
+}
+
+.section-editor__editor-description {
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.buttons-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-item {
+  display: flex;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.editor-button {
+  display: flex;
+  border: 1px solid #D5D5D5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.editor-button__action {
+  background-color: #F1F1F1;
+  border-right: 1px solid#D5D5D5;
+  padding: 4px;
+  padding-left: 32px;
+  position: relative;
+
+  &--watch::before,
+  &--star::before,
+  &--fork::before {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 8px;
+    color: black;
+    fill: black;
+    z-index: 10;
+  }
+
+  &--watch::before {
+    content: url("../img/icons/eye.svg");
+  }
+  &--star::before {
+    content: url("../img/icons/star.svg");
+  }
+  &--fork::before {
+    content: url("../img/icons/fork.svg");
+  }
+}
+
+.editor-button__counter {
+  padding: 4px;
+  background-color: white;
+}

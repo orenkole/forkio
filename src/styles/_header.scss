@@ -11,7 +11,7 @@
     
     background-color: #27262A;
 
-    @media (min-width: 993px) {
+    @media (min-width: $pc) {
         background-color: inherit;
     }
 }
@@ -46,7 +46,7 @@
 
     margin-left: 17px;
 
-    @media (min-width: 401px) {
+    @media (min-width: $tablet) {
         display: block;
     }
 }
@@ -84,7 +84,7 @@
 
     cursor: pointer;
 
-    @media (min-width: 401px) {
+    @media (min-width: $tablet) {
         display: none;
     }
 }
@@ -124,7 +124,7 @@
 .navigation {
     display: none;
 
-    @media (min-width: 401px) {
+    @media (min-width: $tablet) {
         display: flex;
     }
 }

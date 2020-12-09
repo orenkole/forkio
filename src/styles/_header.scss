@@ -90,6 +90,7 @@
     &:hover {
         color: #8D81AC;
         background-color: #FFFFFF;
+        border: 1px solid #8D81AC;
     }
 
     @media (min-width: $pc) {
@@ -202,8 +203,6 @@
 .navigation--active {
     display: block;
     width: 92%;
-    margin-left: 3px;
-
 }
 
 .navigation__item-wrapper {
@@ -277,9 +276,11 @@
     &:hover {
         @media (min-width: $tablet) {
         color: #FFFFFF;
-        }
+
         &::before {
             display: none;
         }
+        }
+
     }
 }

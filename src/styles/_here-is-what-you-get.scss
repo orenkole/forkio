@@ -1,0 +1,111 @@
+.section-here-get {
+  padding-top: 23px;
+  padding-bottom: 32px;
+
+  @media(min-width: $tablet) {
+    padding-top: 62px;
+    padding-bottom: 32px;
+  }
+
+  @media(min-width: $pc) {
+    padding-top: 98px;
+    padding-bottom: 72px;
+    background-color: #F4F4F4;
+  }
+}
+
+
+.container--with-sidebars {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-areas:
+    "screen-title-area"
+    "advantages-list-area"
+    "screen-hello-area";
+
+  @media(min-width: $pc) {
+    grid-template-columns: 1fr minmax(auto, 540px) minmax(auto, 620px) 1fr;
+    column-gap: 10px;
+    grid-template-areas:
+      ".	advantages-list-area screen-title-area	."
+      ".	advantages-list-area screen-hello-area	screen-hello-area";
+  }
+}
+
+.advantages-list {
+  grid-area: advantages-list-area;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media(min-width: $pc) {
+    padding-right: 16px;
+  }
+}
+
+.advantages-item {
+  display: grid;
+  margin-bottom: 38px;
+
+  @media(min-width: $tablet) {
+    grid-template-columns: 111px 1fr;
+    column-gap: 23px;
+    margin-bottom: 60px;
+  }
+  @media(min-width: $pc) {
+    margin-bottom: 35px;
+  }
+}
+
+.advantages-item__img {
+  margin-bottom: 27px;
+  justify-self: center;
+
+  @media(min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.advantage-item__subtitle {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 14px;
+  color: $textColotToRead;
+  font-weight: 400;
+
+  @media(min-width: $tablet) {
+    margin-bottom: 17px;
+    text-align: left;
+  }
+}
+
+.advantage-item__description {
+  text-align: center;
+  font-size: 14px;
+  color:#848E97;
+
+  @media(min-width: $tablet) {
+    text-align: left;
+  }
+}
+
+.container--with-sidebars__screen-title {
+  margin-bottom: 36px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: $textColorCta;
+  grid-area: screen-title-area;
+
+  @media(min-width: $pc) {
+    margin-left: 6px;
+  }
+}
+
+.screen-hello {
+  grid-area: screen-hello-area;
+}
+
+.screen-hello__image {
+  display: block;
+  width: 100%;
+}

@@ -7,7 +7,7 @@
 
     @include montserrat;
     color: #8D81AC;
-    
+
     background-color: #27262A;
 
     position: absolute;
@@ -128,11 +128,11 @@
     &::after,
     &::before {
         content: "";
-        
+
         position: absolute;
         right: 0;
         height: 3px;
-    
+
         background-color: #FFFFFF;
         border-radius: 5px;
     }
@@ -202,8 +202,7 @@
 .navigation--active {
     display: block;
     width: 92%;
-    margin-left: 3px;
-
+    // margin-left: 3px;
 }
 
 .navigation__item-wrapper {

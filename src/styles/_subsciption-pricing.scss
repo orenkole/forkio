@@ -14,18 +14,18 @@
     right: 0;
     margin: 0 auto;
     height: 2px;
-    width: 75%;
+    width: 51%;
     display: block;
     background-color: #645766;
   }
 
   @media(min-width: $tablet-pricing) {
-    padding-top: 98px;
+    padding-top: 88px;
     padding-bottom: 94px;
     background-image: url("../img/pricing-bg/pricing-bg-tablet.png");
   }
   @media(min-width: $pc-pricing) {
-    padding-top: 114px;
+    padding-top: 108px;
     padding-bottom: 90px;
     background-image: url("../img/pricing-bg/pricing-bg-desktopt.png");
   }
@@ -34,29 +34,32 @@
 .section-pricing__h2-subtitle {
   margin-bottom: 32px;
   color: white;
-  font-size: 36px;
+  font-size: 28px;
   text-align: center;
 
   @media(min-width: $tablet-pricing) {
-    margin-bottom: 39px;
+    margin-bottom: 30px;
+    font-size: 42px;
   }
   @media(min-width: $pc-pricing) {
-    margin-bottom: 61px;
+    margin-bottom: 56px;
+    font-size: 46px;
   }
 }
 
 .pricing-list {
   display: grid;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 
   @media(min-width: $tablet-pricing) {
+    justify-items: end;
     justify-content: center;
-    grid-template-columns: repeat(2, 257px);
+    grid-template-columns: 299px 257px;
     column-gap: 25px;
   }
   @media(min-width: $pc-pricing) {
-    grid-template-columns: repeat(4, 257px);
+    grid-template-columns: 257px 257px 299px 257px;
     column-gap: 15px;
   }
 }
@@ -85,7 +88,7 @@
 
 .pricing-item-description {
   background-color: rgba(255, 255, 255, .08);
-  padding-top: 30px;
+  padding-top: 19px;
   padding-bottom: 37px;
 }
 
@@ -95,7 +98,7 @@
   color: white;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .pricing-item__period {
@@ -147,32 +150,54 @@
 
 .pricing-item--agency {
   @extend .pricing-item;
+  width: 299px;
+
 }
 
 .pricing-item__title--agency {
   @extend .pricing-item__title;
-  padding: 43px 8px;
+  padding: 41px 8px;
   background-color: rgba(0, 0, 0, .15);
 }
 
 .pricing-item-description--agency {
   background-color: rgba(0, 0, 0, .1);
-  padding-top: 14px;
+  padding-top: 5px;
   padding-bottom: 47px;
 }
 
 .pricing-item__price--agency {
   @extend .pricing-item__price;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
+  font-size: 82px;
 }
 
 .pricing-item__period--agency {
   @extend .pricing-item__period;
-  margin-bottom: 91px;
+  margin-bottom: 98px;
 }
+
+.pricing-item__period--agency::after {
+  content: "";
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 60px;
+  height: 5px;
+  background-color: $textColorCta;
+}
+
 
 .pricing-item__features-list--agency {
   @extend .pricing-item__features-list;
-  min-height: 99px;
+  min-height: 106px;
   margin-bottom: 16px;
+}
+
+.pricing-item__purchase-btn--agency {
+  @extend .pricing-item__purchase-btn;
+  padding: 17px;
+  width: 190px;
 }

@@ -1,0 +1,139 @@
+.people-talking {
+    background-image: url("../img/people-talking/people-talking-background320.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    padding-top: 57px;
+    padding-bottom: 22px;
+
+    @include lato;
+
+    @media (min-width: $tablet) {
+        padding-top: 86px;
+
+        background-image: url("../img/people-talking/people-talking-background768.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    @media (min-width: $pc) {
+        padding-top: 108px;
+        padding-bottom: 15px;
+
+        background-image: url("../img/people-talking/people-talking-background1200v2.png");
+        background-position: center;
+        background-size: cover;
+
+    }
+}
+
+.people-talking__title {
+    margin: 0 auto 8px;
+    width: 300px;
+
+    @include montserrat;
+    color: #FFFFFF;
+    text-align: center;
+
+    @media (min-width: $tablet) {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $pc) {
+        width: 100%;
+
+    }
+}
+
+.people-talking__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-top: 88px;
+        height: 540px;
+    }
+
+    @media (min-width: $pc) {
+        margin: 75px auto 0;
+
+        height: 380px;
+    }
+}
+
+.people-talking__item {
+    margin: 45px auto 0;
+    width: 84%;
+    height: 166px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &:nth-child(n+4) {
+        height: 150px;
+    }
+
+    @media (min-width: $tablet) {
+        width: 49%;
+        height: 25%;
+        margin: 0;
+
+        &:nth-child(3n) {
+            height: 150px;
+        }
+
+        &:nth-child(n+4) {
+            height: 130px;
+        }    
+    }
+
+    @media (min-width: 528px) {
+        width: 45%;
+    }
+
+    @media (min-width: $pc) {
+        width: 28%;
+        height: 145px;
+
+        &:nth-child(n+4) {
+            height: 125px;
+        }    
+    }
+}
+
+.people-talking__text {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.people-talking__bottom-text {
+    margin: 37px auto 0;
+    width: 82%;
+
+    font-size: 14px;
+    text-align: center;
+    color: #A291A5;
+
+    @media (min-width: $tablet) {
+        margin: 68px auto 0;
+        width: 92%;
+    }
+    @media (min-width: $pc) {
+        margin: 118px auto 0;
+        width: 74%;
+    }
+}

@@ -19,12 +19,12 @@
     background-color: #645766;
   }
 
-  @media(min-width: $tablet-pricing) {
+  @media(min-width: $tablet) {
     padding-top: 88px;
     padding-bottom: 94px;
     background-image: url("../img/pricing-bg/pricing-bg-tablet.png");
   }
-  @media(min-width: $pc-pricing) {
+  @media(min-width: $pc) {
     padding-top: 108px;
     padding-bottom: 90px;
     background-image: url("../img/pricing-bg/pricing-bg-desktopt.png");
@@ -37,11 +37,11 @@
   font-size: 28px;
   text-align: center;
 
-  @media(min-width: $tablet-pricing) {
+  @media(min-width: $tablet) {
     margin-bottom: 30px;
     font-size: 42px;
   }
-  @media(min-width: $pc-pricing) {
+  @media(min-width: $pc) {
     margin-bottom: 56px;
     font-size: 46px;
   }
@@ -52,13 +52,20 @@
   align-items: center;
   justify-items: center;
 
-  @media(min-width: $tablet-pricing) {
+  @media(min-width: $tablet) {
     justify-items: end;
     justify-content: center;
     grid-template-columns: 299px 257px;
     column-gap: 25px;
   }
-  @media(min-width: $pc-pricing) {
+
+  // shrink price items
+  @media(min-width: $tablet) and (max-width: 640px) {
+    grid-template-columns: 250px 220px;
+    column-gap: 10px;
+  }
+
+  @media(min-width: $pc) {
     grid-template-columns: 257px 257px 299px 257px;
     column-gap: 15px;
   }
@@ -68,10 +75,16 @@
   width: 257px;
   margin-bottom: 18px;
 
-  @media(min-width: $tablet-pricing) {
+  @media(min-width: $tablet) {
     margin: 0 12.5px 30px
   }
-  @media(min-width: $pc-pricing) {
+
+  // shrink price items
+  @media(min-width: $tablet) and (max-width: 640px) {
+    width: 220px;
+  }
+
+  @media(min-width: $pc) {
     margin: 0 7.5px
   }
 }
@@ -84,6 +97,12 @@
   font-size: 24px;
   font-weight: 400;
   background-color: rgba(255, 255, 255, .15);
+
+  // shrink price items
+  @media(min-width: $tablet) and (max-width: 640px) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 .pricing-item-description {
@@ -151,6 +170,16 @@
 .pricing-item--agency {
   @extend .pricing-item;
   width: 299px;
+<<<<<<< HEAD
+=======
+
+  // shrink price items
+  @media(min-width: $tablet) and (max-width: 640px) {
+    width: 250px;
+    grid-template-columns: 250px 220px;
+    column-gap: 10px;
+  }
+>>>>>>> student2
 }
 
 .pricing-item__title--agency {

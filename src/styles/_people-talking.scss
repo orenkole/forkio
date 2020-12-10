@@ -89,16 +89,25 @@
         margin: 0;
 
         &:nth-child(3n) {
-            height: 150px;
+            height: 160px;
         }
 
-        &:nth-child(n+4) {
-            height: 130px;
+        &:nth-child(4n) {
+            height: 160px;
+            padding-top: 10px;
+        }
+
+        &:nth-child(n+5) {
+            height: 140px;
         }    
     }
 
     @media (min-width: 528px) {
         width: 45%;
+
+        &:nth-child(4n) {
+            padding-top: 28px;
+        }
     }
 
     @media (min-width: $pc) {

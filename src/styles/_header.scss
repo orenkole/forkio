@@ -3,15 +3,26 @@
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 34px;
-    padding-bottom: 32px;
+    padding: 32px 15px 30px;
 
     @include montserrat;
     color: #8D81AC;
-    
+
     background-color: #27262A;
 
-    @media (min-width: 993px) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    @media (min-width: $tablet) {
+        flex-wrap: wrap;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media (min-width: $pc) {
         background-color: inherit;
     }
 }
@@ -27,6 +38,14 @@
     }
     &:hover .forkio-logo__name {
         color: #FFFFFF;
+    }
+
+    @media (min-width: $tablet) {
+        margin-right: 107px;
+    }
+
+    @media (min-width: $pc) {
+        margin-right: 0px;
     }
 }
 
@@ -46,7 +65,7 @@
 
     margin-left: 17px;
 
-    @media (min-width: 401px) {
+    @media (min-width: $tablet) {
         display: block;
     }
 }
@@ -71,6 +90,11 @@
     &:hover {
         color: #8D81AC;
         background-color: #FFFFFF;
+        border: 1px solid #8D81AC;
+    }
+
+    @media (min-width: $pc) {
+        order: 2;
     }
 }
 
@@ -84,13 +108,17 @@
 
     cursor: pointer;
 
-    @media (min-width: 401px) {
+    @media (min-width: $tablet) {
         display: none;
     }
 }
 
 .menu-button__lines {
-    display: block;
+    display: none;
+
+    &--active {
+        display: block;
+    }
 
     width: 26px;
     height: 3px;
@@ -101,11 +129,11 @@
     &::after,
     &::before {
         content: "";
-        
+
         position: absolute;
         right: 0;
         height: 3px;
-    
+
         background-color: #FFFFFF;
         border-radius: 5px;
     }
@@ -121,19 +149,138 @@
     }
 }
 
+.menu-button__cross {
+    display: none;
+
+    &--active {
+        display: block;
+    }
+
+    @extend %white-line;
+
+    position: absolute;
+    left: 0;
+
+    transform: rotate(45deg);
+
+    &::after {
+        content: "";
+        display: block;
+        @extend %white-line;
+
+        position: absolute;
+        left: 0;
+
+        transform: rotate(90deg);
+    }
+}
+
 .navigation {
     display: none;
 
-    @media (min-width: 401px) {
+    position: absolute;
+    top: 103px;
+
+    @media (min-width: $tablet) {
+        position: static;
+
+        display: block;
+
+        width: 100%;
+        max-width: 537px;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 20px;
+    }
+
+    @media (min-width: $pc) {
+        margin: 0 48px 0 auto;
+        order: 1;
+    }
+}
+
+.navigation--active {
+    display: block;
+    width: 92%;
+}
+
+.navigation__item-wrapper {
+
+    &:last-child::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 14px;
+        background: #333333;
+    }
+
+    @media (min-width: $tablet) {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:last-child::after {
+            display: none;
+        }
     }
 }
 
 .navigation__item {
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 26px;
+    color: #FFFFFF;
+
+    padding: 35px 35px 25px;
+    width: 100%;
+
+    background-color: #333333;
+
+    border-bottom: 3px solid #3B3B3B;
+
+    cursor: pointer;
+
+    position: relative;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: #8D81AC;
+
+        &::before{
+            content: "";
+            display: block;
+            width: 8px;
+            height: 53px;
+
+            background-color: #8D81AC;;
+
+            position: absolute;
+            left: 0;
+            top: 19px;
+        }
+    }
+
+    @media (min-width: $tablet) {
+        font-weight: bold;
+        font-size: 16px;
+        color: #8D81AC;
+
+        padding: 0;
+        width: initial;
+
+        border: none;
+
+        background-color: inherit;
+    }
 
     &:hover {
+        @media (min-width: $tablet) {
         color: #FFFFFF;
+
+        &::before {
+            display: none;
+        }
+        }
+
     }
 }

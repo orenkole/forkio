@@ -5,3 +5,9 @@
 @mixin lato {
     font-family: Lato, Arial, sans-serif;
 }
+
+%white-line {
+    width: 25px;
+    height: 4px;
+    background-color: #FFFFFF;
+}

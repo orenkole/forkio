@@ -1,0 +1,149 @@
+.section-here-get {
+  padding-top: 23px;
+  padding-bottom: 32px;
+
+  @media(min-width: $tablet) {
+    padding-top: 84px;
+    padding-bottom: 0;
+  }
+
+  @media(min-width: $pc) {
+    padding-top: 98px;
+    padding-bottom: 30px;
+    background-color: #F4F4F4;
+  }
+}
+
+
+.container--with-sidebars {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "screen-title-area"
+    "advantages-list-area"
+    "screen-hello-area";
+
+  @media(min-width: $pc) {
+    grid-template-columns: 1fr minmax(auto, 575px) minmax(auto, 625px) 1fr;
+    column-gap: 10px;
+    grid-template-areas:
+      ".	advantages-list-area screen-title-area	."
+      ".	advantages-list-area screen-hello-area	screen-hello-area";
+  }
+}
+
+.advantages-list {
+  grid-area: advantages-list-area;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 37px;
+
+  @media(min-width: $tablet) {
+    margin-bottom: 28px;
+  }
+
+  @media(min-width: $pc) {
+    padding: 0;
+  }
+}
+
+.advantages-item {
+  display: grid;
+  margin-bottom: 27px;
+
+  @media(min-width: $tablet) {
+    grid-template-columns: 111px 1fr;
+    column-gap: 23px;
+    margin-bottom: 65px;
+  }
+  @media(min-width: $pc) {
+    margin-bottom: 36px;
+    padding: 0;
+  }
+}
+
+.advantages-item__img {
+  margin-bottom: 27px;
+  justify-self: center;
+
+  @media(min-width: $tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.advantage-item__subtitle {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 11px;
+  color: $textColotToRead;
+  font-weight: 400;
+
+  @media(min-width: $tablet) {
+    margin-bottom: 8px;
+    text-align: left;
+  }
+  @media(min-width: $pc) {
+    margin-bottom: 12px;
+  }
+}
+
+.advantage-item__description {
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  color:#848E97;
+  font-family: lato;
+
+  @media(min-width: $tablet) {
+    text-align: left;
+    line-height: 21px;
+  }
+  @media(min-width: $pc) {
+    padding-right: 40px;
+    font-family: montserrat;
+  }
+}
+
+.container--with-sidebars__screen-title {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 34px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: $textColorCta;
+  grid-area: screen-title-area;
+  font-size: 32px;
+
+  @media(min-width: $tablet) {
+    font-size: 42px;
+    justify-content: center;
+    margin-bottom: 42px;
+  }
+
+  @media(min-width: $pc) {
+    display: flex;
+    margin-left: 4%;
+    padding: 0;
+    font-size: 48px;
+    line-height: 35px;
+    margin-bottom: 22px;
+  }
+}
+
+.screen-hello {
+  grid-area: screen-hello-area;
+  padding-left: 0;
+
+  @media (min-width: $tablet) {
+    padding-left: 50px;
+  }
+  @media(min-width: $pc) {
+    padding-left: 0;
+  }
+}
+
+.screen-hello__image {
+  display: block;
+  width: 100%;
+}

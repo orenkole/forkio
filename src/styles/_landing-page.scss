@@ -1,0 +1,76 @@
+.landing-page {
+    @include montserrat;
+
+    height: 750px;
+    background-color: black;
+    background-image: url("../img/main-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    max-width: none;
+
+    @media (min-width: $tablet) {
+        height: 800px;
+    }
+}
+
+.landing-page__title {
+    font-weight: bold;
+    font-size: 48px;
+    color: #FFFFFF;
+    text-align: center;
+
+    padding-top: 167px;
+
+    @media (min-width: $tablet) {
+        font-size: 72px;
+
+        padding-top: 186px;
+    }
+
+    @media (min-width: $pc) {
+        font-size: 82px;
+
+        padding-top: 170px;
+    }
+}
+
+.landing-page__text {
+    font-size: 18px;
+    color: #8D81AC;
+    text-align: center;
+    line-height: 24px;
+
+    width: 270px;
+    margin: 19px auto 0;
+
+    @media (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.landing-page__text-tablet {
+    display: none;
+
+    @include lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #8D81AC;
+
+    @media (min-width: $tablet) {
+        display: block;
+        margin: 10px auto 0;
+    }
+}
+
+.landing-page__version {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #848E97;
+    text-align: center;
+
+    width: 270px;
+    margin: 14px auto 0;
+}

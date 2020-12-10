@@ -2,13 +2,17 @@
 @import "./mixins";
 
 .section-editor {
-  padding-top: 35.5px;
+  padding-top: 26.5px;
   padding-bottom: 70px;
   position: relative;
 
   @media(min-width: $tablet) {
-    padding-top: 48px;
-    padding-bottom: 98px;
+    padding-top: 47px;
+    padding-bottom: 69px;
+  }
+
+  @media(min-width: $pc) {
+    padding-top: 48.5px;
   }
 }
 
@@ -19,14 +23,14 @@
 }
 
 .section-editor__trial-cta {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   text-align: center;
 
   @media(min-width: $tablet) {
-    margin-bottom: 93.5px;
+    margin-bottom: 85.5px;
   }
   @media(min-width: $pc) {
-    margin-bottom: 66px;
+    margin-bottom: 60px;
   }
 }
 
@@ -54,14 +58,14 @@
   @media(min-width: $tablet) {
     top: -32px;
     left: calc(50% - 195.5px);
-    padding: 20px 61px;
+    padding: 18px 61px;
     border-radius: 31px;
     font-size: 21px;
     line-height: 22px;
   }
 }
 
-.subtitle-h2 {
+.editor-subtitle-h2 {
   color: $textColorCta;
   text-transform: uppercase;
   font-size: 26px;
@@ -71,11 +75,23 @@
 
   @media(min-width: $tablet) {
     font-size: 42px;
+    margin-bottom: 10px;
+  }
+  @media(min-width: $pc) {
+    font-size: 54px;
   }
 }
 
 .section-editor__subtitle-h2 {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
+
+  @media(min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+
+  @media(min-width: $pc) {
+    margin-bottom: 22px;
+  }
 }
 
 .editor-description {
@@ -90,11 +106,22 @@
   font-size: 21px;
   line-height: 32px;
  }
+
+ @media(min-width: $pc) {
+   font-size: 21px;
+ }
 }
 
 .section-editor__editor-description {
   display: block;
-  margin: 0 auto 16px;
+  margin: 0 auto 27px;
+
+  @media(min-width: $tablet) {
+    margin-bottom: 36px;
+  }
+  @media(min-width: $pc) {
+    margin: 0 auto 23px;
+  }
 }
 
 .buttons-list {
@@ -105,24 +132,30 @@
 
 .button-item {
   display: flex;
-  margin: 8px;
-  cursor: pointer;
+  margin-bottom: 20px;
+
+  @media(min-width: $tablet) {
+    margin: 0 4px 0;
+  }
 }
 
 .editor-button {
   display: flex;
   border: 1px solid #D5D5D5;
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .editor-button__action {
   background-color: #F1F1F1;
   border-right: 1px solid#D5D5D5;
-  padding: 4px;
+  padding: 5px 9px;
   padding-left: 32px;
   position: relative;
   font-family: lato;
+  font-size: 12px;
+  font-weight: 700;
 
   &--watch::before,
   &--star::before,
@@ -130,10 +163,9 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    left: 8px;
+    left: 12px;
     color: black;
     fill: black;
-    z-index: 10;
   }
 
   &--watch::before {
@@ -148,6 +180,11 @@
 }
 
 .editor-button__counter {
-  padding: 4px;
+  padding: 0 6px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   background-color: white;
+  font-size: 12px;
+  font-weight: 700;
 }

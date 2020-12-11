@@ -91,6 +91,7 @@
 
 .pricing-item:first-child {
   @media(min-width: $tablet) and (max-width: $pc) {
+    min-width: 209px;
     width: 84%;
   }
 }

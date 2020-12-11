@@ -47,10 +47,15 @@
   }
 }
 
+.pricing-list-wrapper {
+  max-width: 1114px;
+  margin: 0 auto;
+  display: block;
+}
+
 .pricing-list {
   display: grid;
   align-items: center;
-  justify-items: center;
 
   @media(min-width: $tablet) {
     justify-items: end;
@@ -59,29 +64,21 @@
     column-gap: 25px;
   }
 
-  // shrink price items
-  @media(min-width: $tablet) and (max-width: 640px) {
-    grid-template-columns: 250px 220px;
-    column-gap: 10px;
-  }
-
   @media(min-width: $pc) {
-    grid-template-columns: 257px 257px 299px 257px;
+    max-width: 1114px;
+    // grid-template-columns: 257px 257px 299px 257px;
+    grid-template-columns: 24% 24% 28% 24%;
     column-gap: 15px;
   }
 }
 
 .pricing-item {
-  width: 257px;
+  // width: 257px;
+  width: 100%;
   margin-bottom: 18px;
 
   @media(min-width: $tablet) {
     margin: 0 12.5px 30px
-  }
-
-  // shrink price items
-  @media(min-width: $tablet) and (max-width: 640px) {
-    width: 220px;
   }
 
   @media(min-width: $pc) {
@@ -90,19 +87,13 @@
 }
 
 .pricing-item__title {
-  padding: 36px;
+  padding: 36px 8px;
   text-align: center;
   color: white;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 400;
   background-color: rgba(255, 255, 255, .15);
-
-  // shrink price items
-  @media(min-width: $tablet) and (max-width: 640px) {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
 }
 
 .pricing-item-description {
@@ -169,14 +160,7 @@
 
 .pricing-item--agency {
   @extend .pricing-item;
-  width: 299px;
-
-  // shrink price items
-  @media(min-width: $tablet) and (max-width: 640px) {
-    width: 250px;
-    grid-template-columns: 250px 220px;
-    column-gap: 10px;
-  }
+  // width: 299px;
 }
 
 .pricing-item__title--agency {

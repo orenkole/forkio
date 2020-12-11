@@ -55,34 +55,43 @@
 
 .pricing-list {
   display: grid;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
+  justify-items: center;
 
   @media(min-width: $tablet) {
+    max-width: 590px;
     justify-items: end;
     justify-content: center;
-    grid-template-columns: 299px 257px;
+    grid-template-columns: 1.2fr 1fr;
     column-gap: 25px;
   }
 
   @media(min-width: $pc) {
-    max-width: 1114px;
-    // grid-template-columns: 257px 257px 299px 257px;
-    grid-template-columns: 24% 24% 28% 24%;
+    max-width: 1127px;
+    grid-template-columns: 1fr 1fr 1.2fr 1fr;
     column-gap: 15px;
   }
 }
 
 .pricing-item {
-  // width: 257px;
   width: 100%;
+  max-width: 257px;
   margin-bottom: 18px;
 
   @media(min-width: $tablet) {
-    margin: 0 12.5px 30px
+    margin-bottom: 30px;
   }
 
   @media(min-width: $pc) {
-    margin: 0 7.5px
+    margin-bottom: 0;
+  }
+}
+
+.pricing-item:first-child {
+  @media(min-width: $tablet) and (max-width: $pc) {
+    width: 84%;
   }
 }
 
@@ -160,7 +169,7 @@
 
 .pricing-item--agency {
   @extend .pricing-item;
-  // width: 299px;
+  max-width: 299px;
 }
 
 .pricing-item__title--agency {

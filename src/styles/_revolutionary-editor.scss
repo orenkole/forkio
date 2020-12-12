@@ -133,6 +133,8 @@
 .button-item {
   display: flex;
   margin-bottom: 20px;
+  margin-left: 4px;
+  margin-right: 4px;
 
   @media(min-width: $tablet) {
     margin: 0 4px 0;

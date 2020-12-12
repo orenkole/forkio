@@ -47,12 +47,6 @@
   }
 }
 
-.pricing-list-wrapper {
-  max-width: 1114px;
-  margin: 0 auto;
-  display: block;
-}
-
 .pricing-list {
   display: grid;
   margin-left: auto;
@@ -60,11 +54,14 @@
   align-items: center;
   justify-items: center;
 
-  @media(min-width: $tablet) {
-    max-width: 590px;
+  @media(min-width: $tablet) and (max-width: $pc - 1px) {
+    max-width: 625px;
     justify-items: end;
     justify-content: center;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 0.1fr 2fr 2fr 0.1fr;
+    grid-template-areas:
+      ".            students-area   professional-area   ."
+      "agency-area  agency-area     enterprise-area     .";
     column-gap: 25px;
   }
 
@@ -78,6 +75,7 @@
 .pricing-item {
   width: 100%;
   max-width: 257px;
+  min-width: 209px;
   margin-bottom: 18px;
 
   @media(min-width: $tablet) {
@@ -89,10 +87,24 @@
   }
 }
 
-.pricing-item:first-child {
-  @media(min-width: $tablet) and (max-width: $pc) {
-    min-width: 209px;
-    width: 84%;
+.pricing-item--student {
+  @media(min-width: $tablet) and (max-width: $pc - 1px) {
+    grid-area: students-area;
+  }
+}
+.pricing-item--professional {
+  @media(min-width: $tablet) and (max-width: $pc - 1px) {
+    grid-area: professional-area;
+  }
+}
+.pricing-item--agency {
+  @media(min-width: $tablet) and (max-width: $pc - 1px) {
+    grid-area: agency-area;
+  }
+}
+.pricing-item--enterprise {
+  @media(min-width: $tablet) and (max-width: $pc - 1px) {
+    grid-area: enterprise-area;
   }
 }
 
@@ -110,6 +122,10 @@
   background-color: rgba(255, 255, 255, .08);
   padding-top: 19px;
   padding-bottom: 37px;
+}
+
+.pricing-item__dollar-sign {
+  font-weight: 400;
 }
 
 .pricing-item__price {
@@ -153,6 +169,8 @@
   font-size: 16px;
   color: white;
   text-align: center;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .pricing-item__purchase-btn {

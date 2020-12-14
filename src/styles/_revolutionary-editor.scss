@@ -2,7 +2,7 @@
 @import "./mixins";
 
 .section-editor {
-  padding-top: 26.5px;
+  padding-top: 33.5px;
   padding-bottom: 70px;
   position: relative;
 
@@ -36,7 +36,7 @@
 
 .download-btn {
   position: absolute;
-  top: -32px;
+  top: -24px
   left: calc(50% - 145.5px);
   align-self: center;
   padding: 13px 29px;

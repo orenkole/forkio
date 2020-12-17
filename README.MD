@@ -38,4 +38,4 @@
     Светстать секцию Here is what you get.
     Сверстать секцию Fork Subscription Pricing.
 
-Проэкт размещен на Gitlab pages.
+Проэкт размещен на Github pages https://orenkole.github.io/forkio/.

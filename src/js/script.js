@@ -22,8 +22,6 @@ document.body.addEventListener("click", function (e) {
     !e.target.classList.contains("menu-button") &&
     !e.target.classList.contains("menu-button__lines")
   ) {
-    console.log(e.target);
-
     navigation.classList.toggle("navigation--active");
     menuBtnLines.classList.toggle("menu-button__lines--active");
     menuBtnCross.classList.toggle("menu-button__cross--active");
